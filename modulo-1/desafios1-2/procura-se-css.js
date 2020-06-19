@@ -17,7 +17,7 @@ const usuarios = [
         tecnologias: ['Java', 'C', 'C#']
     }
 ]
-
+// funcao para achar usuarios que trabalham com css
 function checkUsersForCSS (usuario){
     for (let tecnologia of usuario.tecnologias){
         if (tecnologia == 'CSS'){
@@ -25,7 +25,7 @@ function checkUsersForCSS (usuario){
         }else {}
     }   
 }
-
+//chamando o resultado:
 for (let i = 0; i < usuarios.length; i++) {
     const usuarioTrabalhaComCSS = checkUsersForCSS(usuarios[i]);
   

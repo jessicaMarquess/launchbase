@@ -1,4 +1,3 @@
-//criando a array
 const user = {
     name: "Jessica",
     transactions: [],
@@ -41,7 +40,7 @@ function getTransactionsCount(){
     let count = {
         credit: 0,
         debit: 0
-    }
+    };
     for (let transaction of user.transactions){
         if (transaction.type === 'credit'){
             count.credit++;
