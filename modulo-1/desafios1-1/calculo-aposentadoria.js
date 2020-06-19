@@ -16,13 +16,12 @@ if ( sexo === 'M'){
     }else{
         console.log (`${nome}, você não pode se aposentar.`);
     }
-}else{
-    //condicionais para o sexo feminino:
-    if (sexo === 'F'){
-        if (contribuicao >= 35 && somaIdaCont >= 85){
-            console.log (`${nome}, você pode se aposentar.`);
-        }else{
-            console.log (`${nome}, você não pode se aposentar.`);
-        }
+}
+//condicionais para o sexo feminino:
+if (sexo === 'F'){
+    if (contribuicao >= 35 && somaIdaCont >= 85){
+        console.log (`${nome}, você pode se aposentar.`);
+    }else{
+        console.log (`${nome}, você não pode se aposentar.`);
     }
 }
