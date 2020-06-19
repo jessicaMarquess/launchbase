@@ -23,4 +23,4 @@ Este repositório é destinado para os desafios realizados durante o Bootcamp La
 <i>Em andamento.</i>
 
 - - - 
-
+By Jessica Marques através de [Rocketseat](https://rocketseat.com.br/).
