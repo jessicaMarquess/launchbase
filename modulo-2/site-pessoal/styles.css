@@ -1,7 +1,7 @@
 @import "https://fonts.googleapis.com/css2?family=Quicksand:wght@300;700&display=swap";
 
 :root{
-    --color-purple: #460a96;
+    --color-yellow:rgb(238, 79, 132);
 }
 
 *{
@@ -12,16 +12,16 @@
            
 body {
 
-    background: #282a36;
+    background: #3a3c44;
     font-family: 'Quicksand', sans-serif;
-    color: white;
+    color: var(--color-yellow);
 
 }
 header{
 
     padding: 32px;
     border-bottom: 1px solid #333;
-    background: rgba(0, 0, 0, 0.1);
+    background-color: #333;
 
 }
 .links {
@@ -29,10 +29,10 @@ header{
 }
 .links a {
 
-    color: white;
+    color: var(--color-yellow);
 
-    font-size: 18px;
-    line-height: 28px;
+    font-size: 32px;
+    line-height: 42px;
 
     margin: 0 16px;
 
@@ -41,7 +41,7 @@ header{
 }
 .links a:hover{
 
-    color: var(--color-purple);
+    color: rgb(129, 15, 53);
     transition: color 700ms;
 
 }
@@ -57,14 +57,14 @@ header{
     height: 300px;
 
     border-radius: 50%;
-    border: 5px solid var(--color-purple);
+    border: 5px solid var(--color-yellow);
     margin-bottom: 32px;
 
 }
 #wrapper h1{
     
-    font-size: 32px;
-    line-height: 42px;
+    font-size: 46px;
+    line-height: 56px;
     font-weight: bolder;
 
 }
@@ -73,10 +73,10 @@ header{
 
     font-style: 8px;
     line-height: 18px;
+    text-decoration: underline;
 
     font-weight: lighter;
-    opacity: 0.8;
-
+  
 }
 #wrapper p{
    
@@ -88,6 +88,6 @@ header{
 }
 #links-footer a{
     
-    border-bottom: 1px solid var(--color-purple);
+    border-bottom: 1px solid var(--color-yellow);
 
 }
