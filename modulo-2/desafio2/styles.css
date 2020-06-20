@@ -1,0 +1,87 @@
+@import "link href=https://fonts.googleapis.com/css2?family=Roboto&display=swap";
+:root{
+    --color-fonts: beige;
+    --color-purple: #5a1bad;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+body{
+    background: #201f1f;
+    font-family: 'Roboto', sans-serif;
+    color: var(--color-fonts);
+}
+header{
+    padding: 30px;
+    border-bottom: 1px solig #333;
+    background: #9c62e9;
+}
+.links {
+    text-align: center;
+}
+.links a {
+    color: var(--color-fonts);
+
+    font-size: 25px;
+    line-height: 35px;
+
+    margin: 0 16px;
+
+    text-decoration: none;
+}
+.links a:hover{
+    color: var(--color-purple);
+    transition: color 500ms;
+}
+#about {
+    text-align: center;
+
+    padding: 32px;
+}
+#about img {
+
+    height: 300px;
+
+    border-radius: 50%;
+    border: 5px solid var(--color-purple);
+    margin-bottom: 32px;
+
+}
+#about h1{
+    color: var(--color-purple);
+
+    text-overflow: ellipsis;
+    font-size: 42px;
+    line-height: 52px;
+    font-weight: bolder;
+
+}
+#about h2{
+    max-width: 500px;
+    margin: 32px auto;
+    text-align: center;
+    margin-top: 10px;
+
+    font-size: 24;
+    line-height: 34px;
+
+    font-weight: lighter;
+    opacity: 0.8;
+}
+#about ul{
+
+    display: inline-block;
+    list-style-type: none;
+    max-width: 500px;
+    margin: 32px auto;
+
+    font-size: 32px;
+    line-height: 42px;
+
+}
+#footer-links a{
+    border-bottom: 1px solid var(--color-purple);
+}
