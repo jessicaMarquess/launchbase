@@ -19,7 +19,7 @@ Este repositório é destinado para os desafios realizados durante o Bootcamp La
  - [Desafios 1-4](https://github.com/jessicaMarquess/desafios-launchbase/tree/master/modulo-1/desafios1-4)
 
 - - -
-## 📁 Módulo 2:
+## 📁 [Módulo 2:](https://github.com/jessicaMarquess/desafios-launchbase/tree/master/modulo-2)
 - [Desafio 2](https://github.com/jessicaMarquess/desafios-launchbase/tree/master/modulo-2/desafio2)
 
 - - - 
