@@ -20,7 +20,7 @@ Este repositório é destinado para os desafios realizados durante o Bootcamp La
 
 - - -
 ## 📁 Módulo 2:
-<i>Em andamento.</i>
+- [Desafio 2](https://github.com/jessicaMarquess/desafios-launchbase/tree/master/modulo-2/desafio2)
 
 - - - 
 Feito por [Jessica Marques](https://github.com/jessicaMarquess)🖤 através de [Rocketseat](https://rocketseat.com.br/)🚀.
