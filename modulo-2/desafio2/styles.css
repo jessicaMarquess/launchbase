@@ -6,18 +6,22 @@
     --color-gostack:   #4ed361;
 }
 *{
+    /* max-width: 900px;
+    max-height: auto; */
 
+    /* position: fixed; */
     padding: 0;
     margin: 0;
     border: 0;
 
 }
 body{
-
+    
     background: #0e0d11;
     font-family: 'Roboto', sans-serif;
 }
 header{
+   
    
     padding: 30px;
     background: #111116; 
@@ -140,7 +144,7 @@ h1{
 .card{
 
     margin: 0 auto;
-    width: 600px;
+    width: 500px;
     height: 800px;
 
     text-align: center;
@@ -210,7 +214,7 @@ h1{
     grid-template-columns: 1fr 1fr;
 }
 .info p{
-
+    
     margin-top: 200px;
     font-size: 20px;
 }
@@ -245,7 +249,7 @@ h1{
     background-color: white;
 
     width: 90%;
-    height: 90%;
+    height: 95%;
     position: relative;
 
     margin: 5vh auto;
@@ -254,6 +258,7 @@ h1{
    
     color: black;
     position: absolute;
+  
     right: 15px;
     top: 15px;
 
