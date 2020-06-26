@@ -21,6 +21,7 @@ Este repositório é destinado para os desafios realizados durante o Bootcamp La
 - - -
 ## 📁 [Módulo 2:](https://github.com/jessicaMarquess/desafios-launchbase/tree/master/modulo-2)
 - [Desafio 2](https://github.com/jessicaMarquess/desafios-launchbase/tree/master/modulo-2/desafio2)
+- [Foodfy](https://github.com/jessicaMarquess/desafios-launchbase/tree/master/foodfy)
 
 - - - 
 Feito por [Jessica Marques](https://github.com/jessicaMarquess)🖤 através de [Rocketseat](https://rocketseat.com.br/)🚀.
