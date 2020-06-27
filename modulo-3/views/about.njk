@@ -1,0 +1,28 @@
+{% extends "layout.njk" %}
+
+{% block head %}
+    <title>Sobre a Rocketseat</title>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div id="image">
+        <img src="/assets/logo.jpg" alt="Logo Rocketseat">
+    </div>
+    <div class="description">
+        <h1>ROCKETSEAT</h1>
+        <p>As melhores tecnologias em programação, direto ao ponto e do jeito certo.
+            No meio de tanta informação e da quantidade de ferramentas que surgem todos
+            os dias, você precisa de alguém que te leve na direção certa.
+        </p>
+    </div>
+    <div class="list-skills">
+        Tecnologias:
+        <ul>
+            <li id="skill1">NodeJS</li>
+            <li id="skill2">ReactJS</li>
+            <li id="skill3">React Native</li>
+        </ul>
+    </div>
+</div>
+{% endblock %}
