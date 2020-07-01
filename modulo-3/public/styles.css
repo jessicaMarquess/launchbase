@@ -103,17 +103,13 @@ header{
     color: white;
 
 }
-#skill1{
-    color: rgb(55, 136, 57);
+.list-skills{
     list-style-type: none;
 }
-#skill2{
-    color: rgb(34, 199, 222);
+#clear-skills{
     list-style-type: none;
-}
-#skill3{
-    color: rgb(105, 120, 255);
-    list-style-type: none;
+    color: var(--color-gostack);
+    text-decoration: none;
 }
 /* ============ page-not-found=========== */
 .text-information h1{
@@ -127,30 +123,28 @@ header{
 /* ==================CONTENT================= */
 
 h1{
-    
     margin: 0 auto;
+
     text-align: center;
+
     padding-top: 20px;
     padding-bottom: 20px;
+
     color: var(--color-rockeseat);
     font-size: 30px;
+
     text-decoration: underline;
-
 }
-
 .cards{
 
-    
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 
     margin: 0 auto;
     text-align: center;
-    
+   
 }
-
 .card{
-
     margin: 0 auto;
     width: 250px;
     height: 400px;
@@ -160,7 +154,6 @@ h1{
 
     border: 5px solid var(--color-rockeseat);
     border-radius: 20px;
-
 }
 #starter{
     border: 5px solid var(--color-rockeseat);
@@ -251,7 +244,6 @@ h1{
     visibility: hidden;
 
 }
-
 .modal {
 
     background-color: white;
@@ -273,7 +265,6 @@ h1{
     cursor: pointer;
    
 }
-
 /* ========modal.active========= */
 .modal-overlay.active{
     opacity: 1;
@@ -281,11 +272,31 @@ h1{
 }
 
 iframe{
-
     margin-top: 50px;
 
     width: 100%;
-    height: 90%;
+    height: 100%;
 
     position: absolute;
+}
+/* =========  page-course ========= */
+
+.style-course{
+    /* margin: 0 auto; */
+    max-width: 700px;
+}
+.cards{
+    position: relative;
+    padding: 70%;
+    width: 60%;
+}
+.cards iframe{
+    /* margin: 0 auto;
+    /* width: 100%;
+    height: 100%; */ 
+    margin-top: 0;
+    left: 0;
+    /* margin-left: 0; */
+    position: absolute;
+    top: 0;
 }
