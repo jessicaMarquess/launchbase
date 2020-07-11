@@ -1,0 +1,108 @@
+@import "href=https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap";
+
+*  {
+    margin:0;
+    padding:0;
+ 
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    /* width: 940px; */
+    margin: 0 auto;
+}
+header{
+    width: 940px;
+    margin: 0 auto;
+    padding-top: 38px;
+    display: grid; 
+    grid-template-columns: 250px 72px 72px;
+    text-align: left;
+    margin-left: auto;
+}
+header a img{
+    width: 90.6px;
+    height: 26.9px;
+    padding-right: 200px;
+}
+.links-header {  
+    font-size: 16px;
+    text-decoration: none;
+    text-align: center;
+    color: black;
+    padding-top: 5px; 
+    padding-bottom: 56px;
+}
+.preview img{
+    width: 940px;
+    height: 280px;
+    border-radius: 15px;
+}
+.preview h1{
+    padding-top: 50px;
+    font-size: 36px;
+    line-height: 42px;
+}
+.preview h3{
+    font-size: 20px;
+    line-height: 24px;
+    color: #777777;
+    padding-bottom: 50px;
+}
+.ingredients, .preparation, .add_info{
+    width: 940px;
+    margin: 0 auto;
+    text-align: left;
+    padding-bottom: 38px;
+}
+.title{
+    display: flex;
+    flex-direction: row;
+}
+.title h2{
+    font-size: 24px;
+    line-height: 0 0 28px 0;
+}
+.title .hide_show {
+    margin-bottom: 38px;
+    font-size: 12px;
+    line-height: 14px;
+    color: #777777;
+    opacity: 0.8;
+    padding: 10px 8px 0px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+.item_info ul li {
+    text-align: left;
+    font-size: 18px;
+    line-height: 28px;
+    color: #777777;
+    list-style: none;
+}
+.item_info ul li::before{
+    font-size: 18px;
+    content: "•";
+    color: black;
+    padding: 0px 10px 10px 0px;
+}
+.item_info p{
+    text-align: left;
+    font-size: 18px;
+    line-height: 28px;
+    color: #777777;
+}
+
+.item_info.active{
+    display: none;
+}
+footer{
+    margin-top: 70px;
+    padding: 23px;
+    background-color: #EEEEEE;
+    display: absolute;
+    color: #999999;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+}

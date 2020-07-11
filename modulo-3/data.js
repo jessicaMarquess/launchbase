@@ -22,5 +22,5 @@ module.exports = [
         aboutSimple: "nas tecnologias mais modernas de desenvolvimento web e mobile",
         modules: "15 Módulos",
         price: "BUY"
-    },
+    }
 ]

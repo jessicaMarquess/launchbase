@@ -1,0 +1,63 @@
+{% extends "layout.njk" %}
+
+{% block head %}
+    <title>Receita - {{item.title}}</title>
+{% endblock head %}
+
+{% block style %}
+    <link rel="stylesheet" href="/styles/style-recipe.css">
+{% endblock  style%}
+
+{% block content %}
+<div class="wrapper">
+
+    <div class="preview">
+        <img src="{{item.image}}" alt="{{item.title}}">
+        <h1>{{item.title}}</h1>
+        <h3>Por {{item.author}}</h3>
+    </div>
+
+    <div class="container ingredients">
+        <div class="title">
+            <h2>Ingredientes</h2>
+            <p class="hide_show">ESCONDER</p>
+        </div>
+        <div class="item_info">
+            <ul>
+            {% for ingredient in item.ingredients%}
+                <li>{{ingredient}}</li>
+            {% endfor %}
+            </ul>
+        </div>
+    </div>
+
+    <div class="container preparation">
+        <div class="title">
+            <h2>Modo de Preparo</h2>
+            <p class="hide_show">ESCONDER</p>
+        </div>
+        <div class="item_info">
+            <ul>
+            {% for preparation in item.preparation %}
+                <li>{{preparation}}</li>
+            {% endfor %}
+            </ul>  
+        </div>
+    </div>
+
+    <div class="container add_info">
+        <div class="title">
+            <h2>Informações Adicionais</h2>
+            <p class="hide_show">ESCONDER</p>
+        </div>
+        <div class="item_info">
+            <p>{{item.information}}</p>
+        </div>
+    </div>
+
+</div>
+{% endblock content%}
+
+{% block scripts %}
+    <script src="scripts/scripts-recipe.js"></script>
+{% endblock scripts %}

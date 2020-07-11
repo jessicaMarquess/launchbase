@@ -284,6 +284,7 @@ iframe{
 .style-course{
     /* margin: 0 auto; */
     max-width: 700px;
+    margin-bottom: 200px;
 }
 .cards{
     position: relative;

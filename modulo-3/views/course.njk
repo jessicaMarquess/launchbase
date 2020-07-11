@@ -1,16 +1,14 @@
-{% extends "layout.njk" %}
+ {% extends "layout.njk" %}
 
 {% block head %}
     <title>{{item.title}}</title>
-{% endblock %}
+{% endblock %} 
 
 {% block content %}
 <section class = "style-course">
 <div class="cards">
     <div class="card" id="{{item.id}}">
-
         <iframe src="https://rocketseat.com.br/{{item.id}}" frameborder="0"></iframe>
-
         <p id="color-{{item.id}}">{{item.aboutStrong}}</p>
         <p>{{item.aboutSimple}}</p>
         <div class="info">
@@ -20,5 +18,4 @@
     </div>
 </div>
 </section>
-
-{% endblock %}
+{% endblock %} 

@@ -3,38 +3,27 @@
 {% block head %}
     <title>Conteúdos da Rocketseat</title>
 
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" 
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 {% endblock %}
 
 {% block content %}
-<h1>Conteúdos</h1>
+    <h1>Conteúdos</h1>
+    <section>
+        <div class="cards">
 
-<div class="cards">
+            {% for item in items %}
+                <div class="card" id="{{item.id}}">
+                    <img src="assets/{{item.id}}.svg" alt="{{item.id}}">
+                    <p id="color-{{item.id}}">{{item.aboutStrong}}</p>
+                    <p>{{item.aboutSimple}}</p>
+                    <div class="info">
+                        <p>{{item.modules}}</p>
+                        <p id="color-tip">{{item.price}}</p>
+                    </div>
+                </div>
+            {% endfor %}
 
-    {% for item in items %}
-    <div class="card" id="{{item.id}}">
-        <img src="assets/{{item.id}}.svg" alt="{{item.id}}">
-        <p id="color-{{item.id}}">{{item.aboutStrong}}</p>
-        <p>{{item.aboutSimple}}</p>
-        <div class="info">
-            <p>{{item.modules}}</p>
-            <p id="color-tip">{{item.price}}</p>
         </div>
-    </div>
-    {% endfor %}
-</div>
-</section>
-<div class="modal-overlay">
-    <div class="modal">
-        <a class="close-modal">
-            <i class="material-icons"> close </i>
-        </a>
-        <div class="modal-content">
-            
-        </div>
-    </div>
-</div>
-<script src="/scripts.js"></script>
-
+    </section>
+    <script src="/scripts.js"></script>
 {% endblock %}
