@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% block head %}
+            <title>Seateachers</title>
+        {% endblock %}
+        <link rel="icon" href="/assets/book.svg" type="image/x-icon"/>
+        <link rel="stylesheet" href="/styles.css">
+    </head>
+
+    <body>
+        <header>
+            <div class="links">
+                <a href="/teachers">Teachers</a>
+                <a href="/students">Students</a>
+            </div>
+        </header>
+        {% block content %}{% endblock %}
+    </body>
+</html>

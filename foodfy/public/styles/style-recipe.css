@@ -49,7 +49,7 @@ header a img{
     color: #777777;
     padding-bottom: 50px;
 }
-.ingredients, .preparation, .add_info{
+.info_container{
     width: 940px;
     margin: 0 auto;
     text-align: left;
@@ -92,8 +92,11 @@ header a img{
     line-height: 28px;
     color: #777777;
 }
-
-.item_info.active{
+.item_info.visible{
+    visibility: visible;
+}
+.item_info.hidden{
+    visibility: hidden;
     display: none;
 }
 footer{

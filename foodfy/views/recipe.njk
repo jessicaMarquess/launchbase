@@ -9,7 +9,7 @@
 {% endblock  style%}
 
 {% block content %}
-<div class="wrapper">
+<div class="container">
 
     <div class="preview">
         <img src="{{item.image}}" alt="{{item.title}}">
@@ -17,12 +17,12 @@
         <h3>Por {{item.author}}</h3>
     </div>
 
-    <div class="container ingredients">
-        <div class="title">
+    <div class="info_container">
+        <div class = "title">
             <h2>Ingredientes</h2>
-            <p class="hide_show">ESCONDER</p>
+            <a class = "hide_show">ESCONDER</a>
         </div>
-        <div class="item_info">
+        <div class = "item_info visible">
             <ul>
             {% for ingredient in item.ingredients%}
                 <li>{{ingredient}}</li>
@@ -31,12 +31,12 @@
         </div>
     </div>
 
-    <div class="container preparation">
-        <div class="title">
+    <div class = "info_container">
+        <div class = "title">
             <h2>Modo de Preparo</h2>
-            <p class="hide_show">ESCONDER</p>
+            <a class = "hide_show">ESCONDER</a>
         </div>
-        <div class="item_info">
+        <div class = "item_info visible">
             <ul>
             {% for preparation in item.preparation %}
                 <li>{{preparation}}</li>
@@ -45,12 +45,12 @@
         </div>
     </div>
 
-    <div class="container add_info">
-        <div class="title">
+    <div class = "info_container">
+        <div class = "title">
             <h2>Informações Adicionais</h2>
-            <p class="hide_show">ESCONDER</p>
+            <a class = "hide_show">ESCONDER</a>
         </div>
-        <div class="item_info">
+        <div class = "item_info visible">
             <p>{{item.information}}</p>
         </div>
     </div>
@@ -59,5 +59,5 @@
 {% endblock content%}
 
 {% block scripts %}
-    <script src="scripts/scripts-recipe.js"></script>
+    <script src="scripts/scripts-recipes.js"></script>
 {% endblock scripts %}
