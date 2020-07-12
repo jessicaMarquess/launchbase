@@ -22,6 +22,13 @@ Este repositório é destinado para os desafios realizados durante o Bootcamp La
 ## 📁 [Módulo 2:](https://github.com/jessicaMarquess/desafios-launchbase/tree/master/modulo-2)
 - [Desafio 2](https://github.com/jessicaMarquess/desafios-launchbase/tree/master/modulo-2/desafio2)
 - [Foodfy](https://github.com/jessicaMarquess/desafios-launchbase/tree/master/foodfy)
-
+- - -
+## 📁 [Módulo 3:](https://github.com/jessicaMarquess/desafios-launchbase/tree/master/modulo-3)
+- [Desafio 3](https://github.com/jessicaMarquess/desafios-launchbase/tree/master/modulo-3/)
+- Para os detalhes da refatoração do Foodfy utilizando dos aprendizados deste módulo, será possível encontrar no repositório próprio do site. Clique na batata frita para ser redirecionado: [🍟](https://github.com/jessicaMarquess/foodfy).
+- - -
+## 📁 [Módulo 4:](https://github.com/jessicaMarquess/desafios-launchbase/tree/master/modulo-4)
+- [Desafio 4-1]()
+- [Gym]()
 - - - 
 Feito por [Jessica Marques](https://github.com/jessicaMarquess)🖤 através de [Rocketseat](https://rocketseat.com.br/)🚀.
