@@ -1,0 +1,14 @@
+{
+    "teachers": [
+        {
+            "id": 1,
+            "avatar_url": "https://google.com",
+            "name": "Jessica Maria Fontenele Marques",
+            "birth": 891302400000,
+            "edu_level": "Médio Completo",
+            "tip": "À Distância",
+            "proceeding": "programação ",
+            "created_at": 1594821608718
+        }
+    ]
+}
