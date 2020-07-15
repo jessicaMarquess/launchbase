@@ -1,6 +1,26 @@
 const fs = require('fs');
 const data = require('./data.json');
+const { age } = require('./utils')
+// show
+exports.show = function(req,res){
+    const {id} = req.params;
 
+    const foundInstructor = data.instructors.find(function(instructor){
+        return id == instructor.id;
+    });
+
+    if(!foundInstructor) return res.send("Instructors not found!");
+    
+    const instructor = {
+        ...foundInstructor,
+        age: age(foundInstructor.birth),
+        services: foundInstructor.services.split(","),
+        created_at: new Intl.DateTimeFormat('pt-BR').format(foundInstructor.created_at),
+    }
+
+    return res.render("instructors/show", {instructor});
+
+}
 //create
 exports.post = function(req, res){
 
@@ -22,13 +42,13 @@ exports.post = function(req, res){
  
 
     data.instructors.push({
-        avatar_url,
-        birth,
-        created_at,
         id,
+        avatar_url,
+        name,
+        birth,
         gender,
         services,
-        name
+        created_at
     });
 
     fs.writeFile("data.json", JSON.stringify(data, null, 4), function(err){
