@@ -1,11 +1,16 @@
 <h1 align = "center">
 <img src = "https://ik.imagekit.io/jessicamarques/logolaunchbase_U1GibuQwj.png">
 </h1>
+<h4 align="center"> 
+	🚧  🚀 Em construção...  🚧
+</h4>
 
+- - - 
 ## 📖 Sumário:
  1. [Sobre](#-Sobre)
  2. [Módulo 1](#-Módulo-1)
  3. [Módulo 2](#-Módulo-2)
+ 4. [Tecnologias Utilizadas](#-Tecnologias-Utilizadas)
 
 <hr>
 
@@ -31,4 +36,9 @@ Este repositório é destinado para os desafios realizados durante o Bootcamp La
 - [Desafio 4-1]()
 - [Gym]()
 - - - 
+## 📁 [Tecnologias Utilizadas:](#-Tecnologias-Utilizadas)
+- [Node.js](https://nodejs.org/en/)
+
+- - - 
 Feito por [Jessica Marques](https://github.com/jessicaMarquess)🖤 através de [Rocketseat](https://rocketseat.com.br/)🚀.
+- - -
