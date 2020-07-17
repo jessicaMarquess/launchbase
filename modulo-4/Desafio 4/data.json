@@ -67,18 +67,8 @@
             "birth": 945561600000,
             "edu_level": "superior",
             "tip": "D",
-            "proceeding": "Física, Matemática",
-            "created_at": 1594994260708
-        },
-        {
-            "id": 8,
-            "avatar_url": "https://source.unsplash.com/collection/10356769/500x500",
-            "name": "Ítalo Albuquerque",
-            "birth": 945561600000,
-            "edu_level": "superior",
-            "tip": "D",
             "proceeding": "Física",
-            "created_at": 1594994284762
+            "created_at": 1594994260708
         }
     ]
 }

@@ -138,7 +138,7 @@ button[type="submit"]{
     color: white;
     border-radius: 4px;
     margin-top: 16px;
-    width: 80%;
+    width: 100%;
     font-size: 16px;
     cursor: pointer;
 }
@@ -147,4 +147,9 @@ a.button{
     box-sizing: border-box;
     text-align: center;
     text-decoration: none;
+}
+
+#form-delete button[type="submit"]{
+    margin-top: 8px;
+    background-color: #AE2C3F;
 }

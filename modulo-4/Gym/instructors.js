@@ -104,11 +104,12 @@ exports.put = function(req,res){
         return res.redirect(`/instructors/${id}`);
     });
 }
+//delete
 exports.delete = function(req,res){
     const {id} = req.body;
 
     const filteredInstructors = data.instructors.filter(function(instructor) {
-        return instructor.id != id
+        return instructor.id != id;
     });
 
     data.instructors = filteredInstructors;
@@ -120,4 +121,4 @@ exports.delete = function(req,res){
     });
 }
 
-//delete
+
