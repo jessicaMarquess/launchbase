@@ -1,33 +1,6 @@
 {
     "instructors": [
         {
-            "id": 1,
-            "avatar_url": "https://google.com",
-            "name": "Jessica Maria Fontenele Marques",
-            "birth": 891302400000,
-            "gender": "F",
-            "services": "comer",
-            "created_at": 1594847791717
-        },
-        {
-            "id": 2,
-            "avatar_url": "https://google.com",
-            "name": "Dom dem",
-            "birth": 883958400000,
-            "gender": "M",
-            "services": "sofrencia",
-            "created_at": 1594847816911
-        },
-        {
-            "id": 3,
-            "avatar_url": "https://google.com",
-            "name": "Lololo",
-            "birth": 455241600000,
-            "gender": "F",
-            "services": "AS",
-            "created_at": 1594847840089
-        },
-        {
             "id": 4,
             "avatar_url": "https://google.com",
             "name": "scripts",
