@@ -16,11 +16,11 @@ exports.show = function(req,res){
         age: age(foundInstructor.birth),
         services: foundInstructor.services.split(","),
         created_at: new Intl.DateTimeFormat('pt-BR').format(foundInstructor.created_at),
-    }
+    };
 
     return res.render("instructors/show", {instructor});
 
-}
+};
 //create
 exports.post = function(req, res){
 

@@ -1,6 +1,25 @@
 const fs = require('fs');
 const data = require('./data.json');
+const { graduation, age, date } = require('./utils');
 
+exports.show = function(req,res){
+    const {id} = req.params;
+
+    const foundTeacher = data.teachers.find(function(teacher){
+        return id == teacher.id;
+    });
+    
+    if(!foundTeacher) return res.send("Teacher not found!");
+
+    const teacher = {
+        ...foundTeacher,
+        age: age(foundTeacher.birth),
+        edu_level: graduation(foundTeacher.edu_level),
+        proceeding: foundTeacher.proceeding.split(","),
+        created_at: (new Intl.DateTimeFormat('en-US').format(foundTeacher.created_at)),  
+    }
+    return res.render('teachers/show', {teacher});
+};
 exports.post = function(req,res){
     const keys = Object.keys(req.body);
 
@@ -32,5 +51,21 @@ exports.post = function(req,res){
         return res.redirect("/teachers");
     })
 };
+exports.edit = function(req, res){
+    const {id} = req.params;
+
+    const foundTeacher = data.teachers.find(function(teacher){
+        return id == teacher.id;
+    });
+    
+    if(!foundTeacher) return res.send("Teacher not found!");
+
+    const teacher = {
+        ...foundTeacher,
+        birth: date(foundTeacher.birth)
+    }
+
+    return res.render('teachers/edit', {teacher});
+}
 
 

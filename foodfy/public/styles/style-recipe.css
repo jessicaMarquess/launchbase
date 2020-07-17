@@ -92,11 +92,10 @@ header a img{
     line-height: 28px;
     color: #777777;
 }
-.item_info.visible{
-    visibility: visible;
+.item_info{
+    display: block;
 }
 .item_info.hidden{
-    visibility: hidden;
     display: none;
 }
 footer{
