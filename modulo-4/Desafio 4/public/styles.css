@@ -153,3 +153,58 @@ a.button{
     margin-top: 8px;
     background-color: #AE2C3F;
 }
+
+/* INDEX */
+
+.table-container{
+    display: block;
+    padding: 40px;
+    box-sizing: border-box;
+}
+.table-container table{
+    border-spacing: 0;
+}
+.table-container thead tr th{
+    text-align: left;
+}
+td, th{
+    padding: 16px;
+    border-bottom: 0.5px solid var(--color-camel);
+}
+th{
+    text-transform: uppercase;
+    color: var(--hunter-color);
+    font-size: 14px;
+}
+tbody tr:last-child td{
+    border-bottom: none;
+}
+tbody tr td:first-child {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    
+}
+tbody tr td:first-child span{
+    width: 48px;
+    height: 48px;
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+    box-shadow: 3px 1px 6px -4px black;
+    border: 2px solid var(--color-camel);
+    margin-right: 10px;
+}
+tbody tr td:last-child a{
+    background-color: var(--hunter-color);
+    padding: 8px 16px;
+    text-decoration: none;
+    text-decoration: uppercase;
+    color: white;
+    font-size: 12px;
+    border-radius: 4px;
+}
+.table-container thead tr th:last-child,
+td:last-child{
+    text-align: center;
+}
