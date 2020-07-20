@@ -1,0 +1,71 @@
+<div class="item">
+    <div>Avatar URL</div>
+    <div>
+        <input type="url" name="avatar_url" placeholder="http://" value="{{ member.avatar_url }}">
+    </div>
+</div>
+<div class="item">
+    <div>Nome</div>
+    <div>
+        <input type="text" name="name" value="{{ member.name }}">
+    </div>
+</div>
+<div class="item">
+    <div>E-mail</div>
+    <div>
+        <input type="email" name="email" value="{{ member.name }}">
+    </div>
+</div>
+<div class="item">
+    <div>Data de Nascimento</div>
+    <input type="date" name="birth" value="{{ member.birth }}">
+</div>
+<div class="item">
+    <div>Sexo</div>
+    <div>
+        <span>
+            <input type="radio" name="gender" value="M" {% if member.gender == 'M' %} checked="checked" {% endif %}>Masculino
+        </span>
+        <span>
+            <input type="radio" name="gender" value="F" {% if member.gender == 'F' %} checked="checked" {% endif %}>Feminino
+        </span>
+    </div>
+</div>
+<div class="item">
+    <div>Tipo Sanguíneo</div>
+    <select name="blood">
+        <option value="A1"
+        {% if member.blood =="A1" %}selected
+        {% endif %}>A+</option>
+        <option value="A0"
+        {% if member.blood =="A0" %}selected
+        {% endif %}>A-</option>
+        <option value="B1"
+        {% if member.blood =="B1" %}selected
+        {% endif %}>B+</option>
+        <option value="B0"
+        {% if member.blood =="B0" %}selected
+        {% endif %}>B-</option>
+        <option value="AB1"
+        {% if member.blood =="AB1" %}selected
+        {% endif %}>AB+</option>
+        <option value="AB0"
+        {% if member.blood =="AB0" %}selected
+        {% endif %}>AB-</option>
+        <option value="O1"
+        {% if member.blood =="O1" %}selected
+        {% endif %}>O+</option>
+        <option value="O0"
+        {% if member.blood =="O0" %}selected
+        {% endif %}>O-</option>
+    </select>
+</div>
+<div class="item">
+    <div>Peso (kg)</div>
+    <input type="number" name="weight" value="{{ member.weight }}">
+</div>
+<div class="item">
+    <div>Altura (cm)</div>
+    <input type="number" name="height" value="{{ member.height }}">
+</div>
+<button type="submit">Salvar</button>

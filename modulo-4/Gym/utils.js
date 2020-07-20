@@ -19,5 +19,15 @@ module.exports = {
         const day = `0${date.getUTCDate()}`.slice(-2);
 
         return `${year}-${month}-${day}`;
+    },
+    bloodGroups: function (tips){
+        if (tips === 'A1') return 'A+';
+        if (tips === 'A0') return 'A-';
+        if (tips === 'B1') return 'B+';
+        if (tips === 'B0') return 'B-';
+        if (tips === 'AB1') return 'AB+';
+        if (tips === 'AB0') return 'AB-';
+        if (tips === 'O1') return 'O+';
+        if (tips === 'O0') return 'O-';
     }
 }

@@ -1,4 +1,28 @@
 {
+    "members": [
+        {
+            "avatar_url": "https://ik.imagekit.io/jessicamarques/67404053_3133327296708076_2540480431258599424_n_zGHiZK9dq.jpg",
+            "name": "Não Sei",
+            "email": "jessica.marques.dev@gmail.com",
+            "birth": 957916800000,
+            "gender": "M",
+            "blood": "A1",
+            "weight": "100",
+            "height": "190",
+            "id": 1
+        },
+        {
+            "id": 2,
+            "avatar_url": "http://www.google.com",
+            "name": "Print",
+            "email": "jessica.marques.dev@gmail.com",
+            "birth": 957916800000,
+            "gender": "M",
+            "blood": "A1",
+            "weight": "100",
+            "height": "190"
+        }
+    ],
     "instructors": [
         {
             "id": 1,
