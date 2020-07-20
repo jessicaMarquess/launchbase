@@ -14,12 +14,12 @@
                 <td>
                     <span style="background-image: url({{teacher.avatar_url}})"></span>
                     {{teacher.name}}
-                </td>
-                {# {% for discipline in teacher.proceeding %} #}
+                </td>                
                 <td>
-                    <span>{{teacher.proceeding}}</span>
-                {# </td>    
-                {% endfor %} #}
+                    {% for discipline in teacher.proceeding %}
+                    <span>{{discipline}}</span>
+                    {% endfor %}
+                </td>                    
                 <td><a href="/teachers/{{teacher.id}}">Visualizar</a></td>    
             </tr>    
             {% endfor %}

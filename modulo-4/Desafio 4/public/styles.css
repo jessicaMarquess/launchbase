@@ -208,3 +208,12 @@ tbody tr td:last-child a{
 td:last-child{
     text-align: center;
 }
+td:nth-child(2) span{
+    padding: 8px 16px;
+    background-color: var(--hunter-color);
+    border-radius: 15px;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 12px;
+}

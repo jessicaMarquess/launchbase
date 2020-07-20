@@ -3,10 +3,17 @@ const data = require('./data.json');
 const { age, date } = require('./utils')
 
 //routes
-exports.index = function(req,res){
-    return res.render("instructors/index", {instructors: data.instructors});
-};
-
+exports.index = function(req, res) {
+    const teachers = []
+    for (let teacher of data.instructors) {
+        const instructor = {
+            ...teacher,
+            services: teacher.services.split(",")
+        }
+        teachers.push(instructor);
+    }
+    return res.render('instructors/index', { instructors: teachers });
+}
 // show
 exports.show = function(req,res){
     const {id} = req.params;
