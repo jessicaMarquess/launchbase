@@ -1,6 +1,6 @@
 const fs = require('fs');
 const data = require('../data.json');
-const { age, date, bloodGroups } = require('../utils');
+const { date, bloodGroups } = require('../utils');
 
 //routes
 exports.index = function(req, res) {
@@ -8,7 +8,6 @@ exports.index = function(req, res) {
     for (let teacher of data.members) {
         const member = {
             ...teacher,
-            services: teacher.services.split(",")
         }
         teachers.push(member);
     }
@@ -59,7 +58,7 @@ exports.show = function(req,res){
     
     const member = {
         ...foundMember,
-        age: age(foundMember.birth),
+        birth: date(foundMember.birth).birthDay,
         blood: bloodGroups(foundMember.blood)
     };
 
@@ -78,7 +77,7 @@ exports.edit = function(req,res){
 
     const member = {
         ...foundMember,
-        birth: date(foundMember.birth)
+        birth: date(foundMember.birth).iso
     }
     
     return res.render('members/edit', {member});

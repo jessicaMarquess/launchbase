@@ -14,26 +14,6 @@ exports.index = function(req, res) {
     }
     return res.render('instructors/index', { instructors: teachers });
 };
-// show
-exports.show = function(req,res){
-    const {id} = req.params;
-
-    const foundInstructor = data.instructors.find(function(instructor){
-        return id == instructor.id;
-    });
-
-    if(!foundInstructor) return res.send("Instructors not found!");
-    
-    const instructor = {
-        ...foundInstructor,
-        age: age(foundInstructor.birth),
-        services: foundInstructor.services.split(","),
-        created_at: new Intl.DateTimeFormat('pt-BR').format(foundInstructor.created_at),
-    };
-
-    return res.render("instructors/show", {instructor});
-
-};
 exports.create = function(req,res){
     return res.render("instructors/create");
 };
@@ -43,19 +23,13 @@ exports.post = function(req, res){
     const keys = Object.keys(req.body);
 
     for(key in keys){
-        //req.body.key
         if(req.body[key] == "")
         return res.send("Please, fill all fields");
     }
-
     let {avatar_url, birth, name, services, gender} = req.body;
-
-
     birth = Date.parse(birth);
     const created_at = Date.now();
-    const id = Number(data.instructors.length + 1);
-
- 
+    const id = Number(data.instructors.length + 1); 
 
     data.instructors.push({
         id,
@@ -71,7 +45,27 @@ exports.post = function(req, res){
         if(err) return res.send("Write file error");
 
         return res.redirect("/instructors")
-    })
+    });
+};
+// show
+exports.show = function(req,res){
+    const {id} = req.params;
+
+    const foundInstructor = data.instructors.find(function(instructor){
+        return id == instructor.id;
+    });
+
+    if(!foundInstructor) return res.send("Instructors not found!");
+    
+    const instructor = {
+        ...foundInstructor,
+        age: age(foundInstructor.birth),
+        services: foundInstructor.services.split(","),
+        created_at: new Intl.DateTimeFormat("pt-BR").format(foundInstructor.created_at)
+    };
+
+    return res.render("instructors/show", {instructor});
+
 };
 //edit
 exports.edit = function(req,res){
@@ -85,7 +79,7 @@ exports.edit = function(req,res){
 
     const instructor = {
         ...foundInstructor,
-        birth: date(foundInstructor.birth)
+        birth: date(foundInstructor.birth).iso
     }
     
     return res.render('instructors/edit', {instructor});
