@@ -22,10 +22,13 @@ header{
 }
 .links {
     font-size: 22px;
-    padding-top: px;
 }
 .links a + a{
   margin-left: 32px;
+}
+.links a.active {
+    font-weight: bold;
+    color: rgb(228, 227, 227);
 }
 .links a{
     color: white;
@@ -164,6 +167,9 @@ a.button{
 .table-container table{
     border-spacing: 0;
 }
+.table-container thead tr th:nth-child(3){
+    text-align: center;
+}
 .table-container thead tr th{
     text-align: left;
 }
@@ -195,7 +201,20 @@ tbody tr td:first-child span{
     border: 2px solid var(--color-camel);
     margin-right: 10px;
 }
-tbody tr td:last-child a{
+#grade{
+    text-align: center;
+}
+#grade span{
+    padding: 8px 16px;
+    background-color: var(--hunter-color);
+    border-radius: 15px;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+tbody tr td:last-child a,
+.table-container > a{
     background-color: var(--hunter-color);
     padding: 8px 16px;
     text-decoration: none;
@@ -203,6 +222,10 @@ tbody tr td:last-child a{
     color: white;
     font-size: 12px;
     border-radius: 4px;
+}
+.table-container > a{
+    margin-bottom: 16px;
+    display: inline-block;
 }
 .table-container thead tr th:last-child,
 td:last-child{
@@ -217,3 +240,4 @@ td:nth-child(2) span{
     text-transform: uppercase;
     font-size: 12px;
 }
+

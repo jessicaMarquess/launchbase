@@ -25,7 +25,25 @@ module.exports = {
         const month = `0${date.getUTCMonth() + 1}`.slice(-2);
         const day = `0${date.getUTCDate()}`.slice(-2);
 
-        return `${year}-${month}-${day}`;
+        return  {
+            day, 
+            month,
+            year,
+            iso: `${year}-${month}-${day}`,
+            birthDay: `${day}/${month}`
+        };
+    },
+    grade: function(grade){
+        if(grade === '3EF') return '3º Série';
+        if(grade === '4EF') return '4º Série';
+        if(grade === '5EF') return '5º Série';
+        if(grade === '6EF') return '6º Série';
+        if(grade === '7EF') return '7º Série';
+        if(grade === '8EF') return '8º Série';
+        if(grade === '9EF') return '9º Série';
+        if(grade === '1EM') return '1º Ano';
+        if(grade === '2EM') return '2º Ano';
+        if(grade === '3EM') return '3º Ano';
     }
 }
 

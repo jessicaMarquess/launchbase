@@ -5,22 +5,22 @@
 <div class="card">
     <section 
         class="avatar" 
-        style="border-radius: 5px 0 0 5px; background: url({{teacher.avatar_url}}) no-repeat center center / cover">
+        style="border-radius: 5px 0 0 5px; background: url({{student.avatar_url}}) no-repeat center center / cover">
     </section>
     <section class="details">
-        <form method="POST" action="/teachers?_method=PUT">
+        <form method="POST" action="/students?_method=PUT">
             <h3>Edite Seu Perfil</h3>
-            {% include 'teachers/fields.njk'%}
+            {% include 'students/fields.njk'%}
             <input 
                 type="hidden" 
                 name="id" 
-                value={{teacher.id}}>
+                value={{student.id}}>
         </form> 
-        <form id="form-delete" action="/teachers?_method=DELETE" method="POST">
+        <form id="form-delete" action="/students?_method=DELETE" method="POST">
             <input 
                 type="hidden" 
                 name="id"
-                value={{teacher.id}}>
+                value={{student.id}}>
             <button type="submit">Deletar</button>
         </form>
     </section>
