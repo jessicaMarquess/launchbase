@@ -1,6 +1,7 @@
 const fs = require('fs');
 const data = require('../data.json');
 const { date, grade } = require('../utils');
+const Intl = require("intl");
 
 exports.index = function(req, res) {
     const mrStudent = []
