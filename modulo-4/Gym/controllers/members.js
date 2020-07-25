@@ -1,6 +1,7 @@
 const fs = require('fs');
 const data = require('../data.json');
 const { date, bloodGroups } = require('../utils');
+const Intl = require('intl');
 
 //routes
 exports.index = function(req, res) {
