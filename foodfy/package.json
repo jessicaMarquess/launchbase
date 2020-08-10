@@ -5,6 +5,7 @@
   "main": "scripts.js",
   "dependencies": {
     "express": "^4.17.1",
+    "method-override": "^3.0.0",
     "nodemon": "^2.0.4",
     "nunjucks": "^3.2.1"
   },

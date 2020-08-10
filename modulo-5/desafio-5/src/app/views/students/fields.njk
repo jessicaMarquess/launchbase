@@ -1,0 +1,88 @@
+<div class="item">
+    <div>Avatar URL</div>
+    <div>
+        <input 
+        type="url" 
+        name="avatar_url" 
+        placeholder="http://" 
+        value = "{{student.avatar_url}}"
+        >
+    </div>
+</div>
+<div class="item">
+    <div>Nome Completo</div>
+    <div>
+        <input 
+        type="text" 
+        name="name" 
+        placeholder="Name Complete" 
+        value = "{{student.name}}"
+        >
+    </div>
+</div>
+<div class="item">
+    <div>E-mail</div>
+    <div>
+        <input 
+        type="text" 
+        name="email" 
+        value = "{{student.email}}"
+        >
+    </div>
+</div>
+<div class="item">
+    <div>Data de Nascimento</div>
+    <div>
+        <input 
+            type="date" 
+            name="birth" 
+            value = "{{student.birth}}"
+        >
+    </div>
+</div>
+<div class="item">
+    <div>Ano Escolar</div>
+    <select name="grade">
+        <option value="3EF"
+        {% if member.grade =="1EF" %}selected
+        {% endif %}>3º Série Ensino Fundamental</option>
+        <option value="4EF"
+        {% if member.grade =="4EF" %}selected
+        {% endif %}>4º Série Ensino Fundamental</option>
+        <option value="5EF"
+        {% if member.grade =="5EF" %}selected
+        {% endif %}>5º Série Ensino Fundamental</option>
+        <option value="6EF"
+        {% if member.grade =="6EF" %}selected
+        {% endif %}>6º Série Ensino Fundamental</option>
+        <option value="7EF"
+        {% if member.grade =="7EF" %}selected
+        {% endif %}>7º Série Ensino Fundamental</option>
+        <option value="8EF"
+        {% if member.grade =="8EF" %}selected
+        {% endif %}>8º Série Ensino Fundamental</option>
+        <option value="9EF"
+        {% if member.grade =="9EF" %}selected
+        {% endif %}>9º Série Ensino Fundamental</option>
+        <option value="1EM"
+        {% if member.grade =="1EM" %}selected
+        {% endif %}>1º Ano Ensino Médio</option>
+        <option value="2EM"
+        {% if member.grade =="2EM" %}selected
+        {% endif %}>2º Ano Ensino Médio</option>
+        <option value="3EM"
+        {% if member.grade =="3EM" %}selected
+        {% endif %}>3º Ano Ensino Médio</option>
+    </select>
+</div>
+<div class="item">
+    <div>Carga Horária p/ Semana </div>
+    <div>
+        <input 
+        type="number" 
+        name="workload"  
+        value = "{{student.workload}}"
+        >
+    </div>
+</div>
+<button type="submit">Salvar</button>

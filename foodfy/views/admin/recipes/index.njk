@@ -1,0 +1,22 @@
+{% extends "admin/recipes/layout.njk" %}
+{% block content %}
+ 
+   <div class="container">
+       <h2>Gerenciar receitas</h2>
+   </div>
+    <div class="recipes">
+    {% for recipe in recipes %}
+        <div class="recipe">
+        <div style="background: url({{recipe.image}}) center center / cover"></div>
+            <div>
+                <span>{{recipe.title}}</span>
+                <span>{{recipe.author}}</span>
+                <a href="/admin/recipes/{{recipe.id}}">Visualizar</a>
+            </div>
+        </div>
+    {% endfor %}
+    </div>
+    <div class="createBtn">
+        <a id="create" href="/admin/recipes/create">Adicione uma nova receita</a>
+    </div>
+{% endblock content %}

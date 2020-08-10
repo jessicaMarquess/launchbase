@@ -1,0 +1,14 @@
+{% extends "admin/recipes/layout.njk" %}
+{% block content %}
+    <div class = "container">
+        <h1>Edite receita</h1>
+        <button type = "submit">Salvar receita</button>
+        <button>Delete</button>
+    </div>
+
+    <form class = "card" action= "POST" action = "admin/recipes">
+        {% include 'admin/recipes/fields.njk'%}
+         <input type="hidden" name="id" value="{{recipe.id}}">
+
+    </form>
+{% endblock content %}

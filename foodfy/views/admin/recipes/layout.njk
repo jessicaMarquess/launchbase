@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% block head %}
+            <title>Foodfy</title>
+        {% endblock head %}
+        <link rel="stylesheet" href="../../styles/style-pages-admin.css">
+    </head>
+
+    <body>
+        <header class = 'link-home'>
+            <a href="/"><img src="/assets/logo-2.png" alt="logo"></a>
+        </header>
+
+        {% block content %}{% endblock content %}
+
+    </body>
+</html>
