@@ -14,11 +14,11 @@
                 </h3>
 
                 {% include 'members/fields.njk' %}
-                <input type="hidden" name="id" value={{member.id} }="}">
+                <input type="hidden" name="id" value={{member.id}}>
 
             </form>
             <form id="form-delete" action="/members?_method=DELETE" method="POST">
-                <input type="hidden" name="id" value={{member.id} }="}">
+                <input type="hidden" name="id" value={{member.id}}>
                 <button type="submit">Deletar</button>
             </form>
         </section>
