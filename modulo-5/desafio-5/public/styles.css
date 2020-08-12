@@ -241,3 +241,11 @@ td:nth-child(2) span{
     font-size: 12px;
 }
 
+/* edit */
+.avatar{
+    background: var(--hunter-color);
+}
+.avatar img{
+    width: 100%;
+    padding-top: 150px;
+}

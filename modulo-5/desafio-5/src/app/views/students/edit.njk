@@ -3,9 +3,8 @@
 {% block content %}
 
 <div class="card">
-    <section 
-        class="avatar" 
-        style="border-radius: 5px 0 0 5px; background: url({{student.avatar_url}}) no-repeat center center / cover">
+    <section class="avatar">
+        <img src="{{avatar_url}}" alt="">
     </section>
     <section class="details">
         <form method="POST" action="/students?_method=PUT">

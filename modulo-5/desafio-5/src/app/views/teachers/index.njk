@@ -17,9 +17,7 @@
                     {{teacher.name}}
                 </td>                
                 <td>
-                    {% for discipline in teacher.proceeding %}
-                    <span>{{discipline}}</span>
-                    {% endfor %}
+                    <span>{{teacher.subjects_taught | replace (",", " -")}}</span>
                 </td>                    
                 <td><a href="/teachers/{{teacher.id}}">Visualizar</a></td>    
             </tr>    

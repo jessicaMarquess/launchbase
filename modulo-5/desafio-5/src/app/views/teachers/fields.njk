@@ -25,33 +25,33 @@
     <div>
         <input 
             type="date" 
-            name="birth" 
-            value = "{{teacher.birth}}"
+            name="birth_date" 
+            value = "{{teacher.birth_date}}"
         >
     </div>
 </div>
 <div class="item">
     <div>Grau de Escolaridade</div>
     <div>
-        <select name="edu_level">
+        <select name="education_level">
             <option 
                 value="medio" 
-                {% if teacher.edu_level == "medio" %} selected {% endif %}
+                {% if teacher.education_level == "medio" %} selected {% endif %}
                 >Ensino Médio Completo
             </option>
             <option 
                 value="superior" 
-                {% if teacher.edu_level == "superior" %} selected {% endif %}
+                {% if teacher.education_level == "superior" %} selected {% endif %}
                 >Ensino Superior Completo
             </option>
             <option 
                 value="mestrado" 
-                {% if teacher.edu_level == "mestrado" %} selected {% endif %}
+                {% if teacher.education_level == "mestrado" %} selected {% endif %}
                 >Mestrado
             </option>
             <option 
                 value="doutorado" 
-                {% if teacher.edu_level == "doutorado" %} selected {% endif %}
+                {% if teacher.education_level == "doutorado" %} selected {% endif %}
                 >Doutorado
             </option>
         </select>
@@ -63,16 +63,16 @@
         <span>
             <input 
                 type="radio" 
-                name="tip" 
-                value="P" {% if teacher.tip == "P" %} checked 
+                name="class_type" 
+                value="P" {% if teacher.class_type == "P" %} checked 
                 {% endif %}>Presencial
         </span>
         <span>
             <input 
                 type="radio" 
-                name="tip" 
+                name="class_type" 
                 value="D" 
-                {% if teacher.tip == "D" %} 
+                {% if teacher.class_type == "D" %} 
                 checked
                 {% endif %}>À Distância
         </span>
@@ -83,9 +83,9 @@
     <div>
         <input 
             type="text" 
-            name="proceeding" 
+            name="subjects_taught" 
             placeholder="Áreas separadas por vírgulas" 
-            value = "{{teacher.proceeding}}">
+            value = "{{teacher.subjects_taught}}">
     </div>
 </div>
 <button type="submit">Salvar</button>

@@ -2,9 +2,8 @@
 
 {% block content %}
   <div class="card">
-            <section 
-            class = "avatar"
-            style = "border-radius: 5px 0 0 5px; background: url({{teacher.avatar_url}}) no-repeat center center / cover">
+            <section class = "avatar">
+                <img src="{{teacher.avatar_url}}" alt="">
             </section>
             <section class ="details">
                 <h3>Professor(a)</h3>
@@ -18,16 +17,16 @@
                 </div>
                 <div class="item">
                     <div>Grau de Escolaridade:</div>
-                    <div>{{teacher.edu_level}}</div>
+                    <div>{{teacher.education_level}}</div>
                 </div>
                 <div class="item">
                     <div>Tipo de Aula</div>
-                    <div>{{"À Distância" if teacher.tip == "D" else "Presencial"}}</div>
+                    <div>{{"À Distância" if teacher.class_type == "D" else "Presencial"}}</div>
                 </div>
                 <div class="item">
                     <div>Acompanhamento:</div>
                     <div>
-                        {% for service in teacher.proceeding %}
+                        {% for service in teacher.subjects_taught %}
                             <span>{{service}}</span>
                         {% endfor %}  
                     </div>
