@@ -30,7 +30,7 @@ module.exports = {
             data.class_type,
             data.subjects_taught,
             date(Date.now()).iso
-        ]
+        ];
         db.query(query, values, function(err, results){
             if(err) throw `Database Error! ${err}`;
 
@@ -55,7 +55,7 @@ module.exports = {
                 birth_date=($3),
                 education_level=($4),
                 class_type=($5),
-                subjects_taught($6)
+                subjects_taught=($6)
             WHERE id = $7
         `
 
@@ -79,6 +79,6 @@ module.exports = {
             if(err) throw `Database Error! ${err}`;
 
             return callback();
-        })
+        });
     }
 }

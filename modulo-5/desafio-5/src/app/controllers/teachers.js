@@ -53,12 +53,12 @@ module.exports = {
         }
 
         Teacher.update(req.body, function(){
-            return res.redirect(`teachers/${req.body.id}`);
+            return res.redirect(`/teachers/${req.body.id}`);
         });
     },
     delete(req, res){
         Teacher.delete(req.body.id, function(){
             return res.redirect(`teachers`);
         });
-    },
+    }
 }
