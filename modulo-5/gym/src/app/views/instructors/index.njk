@@ -8,9 +8,8 @@
                 <tr>
                     <th>Instructor</th>
                     <th>Atendimento</th>
-                    <th>
-                        Ação
-                    </th>
+                    <th>Alunos</th>
+                    <th>Ação</th>
                 </tr>
                 <tbody>
                     {% for instructor in instructors %}
@@ -22,6 +21,7 @@
                             <td>
                                 <span>{{instructor.services | replace (",", " -")}}</span>
                             </td>
+                             <td>{{instructor.total_students}}</td>
                             <td>
                                 <a href="/instructors/{{instructor.id}}">Ver</a>
                             </td>

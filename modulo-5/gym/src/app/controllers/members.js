@@ -1,16 +1,17 @@
 const Member = require('../../app/models/Members')
-const { age, date } = require('../../lib/utils');
+const { bloodGroups, date } = require('../../lib/utils');
 const Intl = require('intl');
 
 module.exports = {
     index(req, res){
         Member.all(function(members){
             return res.render('members/index', {members});
-        })
-        
+        });
     },
     create(req, res){
-        return res.render("members/create");
+        Member.instructorsSelectOptions(function(options){
+            return res.render("members/create", {instructorOptions: options});
+        });
     },
     post(req, res){
         const keys = Object.keys(req.body);
@@ -28,6 +29,7 @@ module.exports = {
             if(!member) return res.send("Member not exist, please try again!");
 
             member.birth = date (member.birth).birthDay;
+            member.blood = bloodGroups(member.blood);
 
 
             return res.render("members/show", {member});
@@ -39,8 +41,10 @@ module.exports = {
             if(!member) return res.send("Member not exist, please try again!");
 
             member.birth = date(member.birth).iso;
-
-            return res.render("members/edit", {member});
+            
+            Member.instructorsSelectOptions(function(options){
+                return res.render("members/edit", {member, instructorOptions: options});
+            });
         });
     },
     put(req, res){
