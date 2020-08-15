@@ -2,11 +2,23 @@
 
 {% block content %}
 <div class="card table-container">
+    <div class="header">
+        <a class="button" href="/teachers/create">Novo</a>
+        <form action="/teachers" method="GET">
+            <input 
+                type="text" 
+                name="filter"
+                placeholder="Nome ou Disciplina" 
+                value="{{filter}}"
+            >
+            <button type="submit">Filtrar</button>
+        </form>
+    </div>
     <table width="100%">
-        <a href="/teachers/create">Novo</a>
         <thead>
             <th>Professor</th>
             <th>Disciplinas</th>
+            <th>Alunos</th>
             <th>Ação</th>
         </thead>
         <tbody>
@@ -18,7 +30,8 @@
                 </td>                
                 <td>
                     <span>{{teacher.subjects_taught | replace (",", " -")}}</span>
-                </td>                    
+                </td>              
+                <td> {{teacher.total_students}} </td>      
                 <td><a href="/teachers/{{teacher.id}}">Visualizar</a></td>    
             </tr>    
             {% endfor %}

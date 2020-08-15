@@ -34,7 +34,7 @@ module.exports = {
             format: `${day}/${month}/${year}`
         };
     },
-    grade(grade){
+    tip(grade){
         if(grade === '3EF') return '3º Série';
         if(grade === '4EF') return '4º Série';
         if(grade === '5EF') return '5º Série';

@@ -44,7 +44,7 @@
     <div>Ano Escolar</div>
     <select name="grade">
         <option value="3EF"
-        {% if member.grade =="1EF" %}selected
+        {% if member.grade =="3EF" %}selected
         {% endif %}>3º Série Ensino Fundamental</option>
         <option value="4EF"
         {% if member.grade =="4EF" %}selected
@@ -84,5 +84,16 @@
         value = "{{student.workload}}"
         >
     </div>
+</div>
+
+<div class="item">
+    <div>Professor</div>
+    <select name="teacher">
+        {% for teacher in teacherOptions %}
+            <option value="{{teacher.id}}" {% if student.teacher_id == teacher.id %} selected="selected"{% endif %}>
+                {{teacher.name}}
+            </option>
+        {% endfor %}
+    </select>
 </div>
 <button type="submit">Salvar</button>

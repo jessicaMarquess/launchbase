@@ -135,7 +135,8 @@ input::placeholder{
     font-weight: normal;
 }
 a.button,
-button[type="submit"]{
+button[type="submit"],
+a.button{
     padding: 8px 32px;
     background-color: var(--hunter-color);
     color: white;
@@ -213,6 +214,9 @@ tbody tr td:first-child span{
     text-transform: uppercase;
     font-size: 12px;
 }
+tbody tr td:nth-child(3){
+    text-align: center;
+}
 tbody tr td:last-child a,
 .table-container > a{
     background-color: var(--hunter-color);
@@ -248,4 +252,31 @@ td:nth-child(2) span{
 .avatar img{
     width: 100%;
     padding-top: 150px;
+}
+/* filters */
+
+.table-container .header{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    margin-bottom: 32px;
+}
+.table-container .header a{
+    margin: 0;
+    width: 120px;
+}
+.table-container .header form{
+    display: grid;
+    grid-template-columns: 1fr 120px;
+    align-items: center;
+    grid-gap: 8px;
+}
+.table-container .header form input{
+    border: 1px solid #eee;
+    padding: 4px 8px;
+    box-sizing: border-box;
+}
+.table-container .header form button {
+    margin: 0;
+    cursor: pointer;
 }

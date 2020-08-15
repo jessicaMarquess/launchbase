@@ -1,15 +1,17 @@
-const { date, grade } = require('../../lib/utils');
+const { date, tip } = require('../../lib/utils');
 const Student = require('../../app/models/Student')
 const Intl = require("intl");
 
 module.exports = {
     index(req, res){
-        Student.all(function(students){
-            return res.render('students/index', {students});
-        });
+            Student.all(function(students){
+                return res.render('students/index', {students});
+            });
     },
     create(req, res){
-        return res.render("students/create");
+        Student.teachersSelectOptions(function(options){
+            return res.render("students/create", {teacherOptions: options});
+        });
     },
     post(req, res){
         const keys = Object.keys(req.body);
@@ -27,7 +29,7 @@ module.exports = {
             if(!student) return res.send("Student not exist, please try again!");
 
             student.birth_date = date(student.birth_date).birthDay;
-            student.grade = grade(student.grade);
+            student.grade = tip(student.grade);
 
             return res.render("students/show", {student});
         });
@@ -38,7 +40,9 @@ module.exports = {
 
             student.birth_date = date(student.birth_date).iso;
 
-            return res.render("students/edit", {student});
+            Student.teachersSelectOptions(function(options){
+                return res.render("students/create", {teacherOptions: options});
+            });
         });
     },
     update(req, res){
