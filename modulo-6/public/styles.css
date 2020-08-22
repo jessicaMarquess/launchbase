@@ -2,7 +2,7 @@
 
 :root{
     --primary-color: #fd951f;
-    --secondary-color: #1fd4fd;
+    --secondary-color: #1ba6c5;
 }
 * {
     margin: 0;
@@ -44,6 +44,18 @@ body {
 }
 .button:hover{
     background-color: #d7780b;
+}
+.button.edit{
+    background-color: var(--secondary-color);
+}
+.button.edit:hover{
+    background-color: #046c83;
+}
+.button.delete{
+    background-color: lightgrey;
+}
+.button.delete:hover{
+    background-color: rgb(224, 77, 77);
 }
 /* header */
 header, 
@@ -122,6 +134,9 @@ section.form .header h3{
     color: var(--primary-color);
     margin-bottom: 16px;
 }
+form .fields{
+    margin-bottom: 64px;
+}
 form .item{
     margin-bottom: 16px;
 }
@@ -158,7 +173,16 @@ form .item select{
 form .item textarea{
     min-height: 150px;
 }
-
-form .fields{
-    margin-bottom: 64px;
+form .item span{
+    padding: 8px 16px;
+    background-color: var(--primary-color);
+    border-radius: 16px;
+    color: white;
+    margin-right: 4px;
+    margin-top: 8px;
+    display: inline-flex;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 12px;
+    cursor: pointer;
 }
