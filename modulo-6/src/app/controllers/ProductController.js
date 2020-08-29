@@ -18,7 +18,6 @@ module.exports = {
         });  
     },
     async post(req, res){
-        //logica de salvar
         const keys = Object.keys(req.body);
 
         for(key of keys){
@@ -33,14 +32,14 @@ module.exports = {
             let results = await Product.create(req.body);
             const productId = results.rows[0].id;
 
-            req.files.forEach(file => {
-                await File.create({
-                    ...file,
-                    product_id: productId
-                });
-            });
+            const filesPromise = req.files.map(file => File.create({
+                ...file,
+                product_id: productId
+            })
+            );
+            await Promise.all(filesPromise);
 
-            return res.redirect(`/products/${productId}`);
+            return res.redirect(`/products/${productId}/edit`);
     },
     async edit(req, res){
         let results = await Product.find(req.params.id);
