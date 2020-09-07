@@ -13,7 +13,6 @@ const Mask = {
         }).format(value/100);
     }
 };
-
 const PhotosUpload = {
     input: "",
     preview: document.querySelector('#photos-preview'),
@@ -116,7 +115,6 @@ const PhotosUpload = {
         photoDiv.remove();
     }
 };
-
 const ImageGallery = {
     highlight: document.querySelector('.gallery .highlight > img'),
     previews: document.querySelectorAll('.gallery-preview img'),
@@ -130,7 +128,6 @@ const ImageGallery = {
         Lightbox.image.src = target.src;
     }
 };
-
 const Lightbox = {
     target: document.querySelector('.lightbox-target'),
     image: document.querySelector('.lightbox-target img'),
@@ -147,4 +144,4 @@ const Lightbox = {
         Lightbox.target.style.bottom = "initial";
         Lightbox.closeButton.style.top = "-80px";
     }
-}
+};
