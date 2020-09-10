@@ -48,7 +48,7 @@ module.exports = {
             if(req.body[key] == ""){
                 return res.send('Please, fill all fields');
             }
-        } 
+        };
 
         if(req.files.length == 0)
             return res.send('Please, send at least one image');
