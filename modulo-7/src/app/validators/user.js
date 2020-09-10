@@ -9,13 +9,13 @@ async function post(req, res, next){
             };
         };
         //check if user exists [email, cpf_cnjp uniques]
-        const {email, cpf_cnpj, password, passwordRepeat} = req.body;
+        let {email, cpf_cnpj, password, passwordRepeat} = req.body;
 
-        cpf_cnpj = cpf_cnpj.replace(/\D/g,"");
+        cpf_cnpj = cpf_cnpj.replace(/\D/g, "");
 
         const user = await User.findOne({
-            where: {email},
-            or: {cpf_cnpj}
+            where: { email },
+            or: { cpf_cnpj }
         });
 
         if(user) return res.send('Users exists');
