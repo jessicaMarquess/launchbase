@@ -30,8 +30,12 @@
         <input 
             type="password" 
             name="password" 
+            {% if not user.id %}
             placeholder="Adicione uma senha"
-            value="{{ user.password }}"
+            {% else %}
+            placeholder="Digite sua senha para atualizar o formulário"
+            {% endif %}
+            
         >
     </div>
 </div>

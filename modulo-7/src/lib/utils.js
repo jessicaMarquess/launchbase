@@ -25,5 +25,42 @@ module.exports = {
             style: 'currency',
             currency: 'BRL'
         }).format(price/100);
+    },
+    formatCpfCnpj(value) {
+        value = value.replace(/\D/g,"");
+
+        if(value.length > 14){
+            value = value.slice(0, -1);
+        }
+        //check if  cnpj: - 11.222.333/0001-11
+        if(value.length > 11){ //sera um cnpj
+            value = value.replace(/(\d{2})(\d)/,"$1.$2");
+             // 11.2223330001-11
+            value = value.replace(/(\d{3})(\d)/,"$1.$2");
+             // 11.222.3330001-11
+            value = value.replace(/(\d{3})(\d)/,"$1/$2");
+             // 11.222.333/000111
+            value = value.replace(/(\d{4})(\d)/,"$1-$2");
+             // 11.222.333/0001-11
+        } else {    //sera um cpf
+            //cpf 111.222.333-55
+            value = value.replace(/(\d{3})(\d)/,"$1.$2");
+            // 111.22233355
+            value = value.replace(/(\d{3})(\d)/,"$1.$2");
+            // 111.222.33355
+            value = value.replace(/(\d{3})(\d)/,"$1-$2");
+            //111.222.333-55
+        };
+        return value;
+
+    },
+    formatCep(value) {
+        value = value.replace(/\D/g,"");
+        if(value.length > 8){
+            value = value.slice(0, -1);
+        }
+        value = value.replace(/(\d{5})(\d)/,"$1-$2");
+
+        return value;
     }
 }
