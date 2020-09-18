@@ -1,21 +1,44 @@
+const {formatPrice, date} = require('../../lib/utils');
+
 const Category = require('../models/Category');
 const Product = require('../models/Product');
 const File = require('../models/File');
-const {formatPrice, date} = require('../../lib/utils');
 
 
 module.exports = {
     create(req, res){
-        //pegar as categorias
         Category.all()
         .then(function(results){
-
             const categories = results.rows;
-
             return res.render("products/create.njk", {categories});
         }).catch(function(err){
             throw new Error(err);
         });  
+    },
+    async post(req, res){
+        const keys = Object.keys(req.body);
+
+        for(key of keys){
+            if(req.body[key] == ""){
+                return res.send('Please, fill all fields');
+            }
+        };
+
+        if(req.files.length == 0)
+            return res.send('Please, send at least one image');
+
+            req.body.user_id = req.session.userId;
+            let results = await Product.create(req.body);
+            const productId = results.rows[0].id;
+
+            const filesPromise = req.files.map(file => File.create({
+                ...file,
+                product_id: productId
+            })
+            );
+            await Promise.all(filesPromise);
+
+            return res.redirect(`/products/${productId}/edit`);
     },
     async show(req, res){
 
@@ -41,30 +64,7 @@ module.exports = {
 
         return res.render("products/show",{product, files});
     },
-    async post(req, res){
-        const keys = Object.keys(req.body);
-
-        for(key of keys){
-            if(req.body[key] == ""){
-                return res.send('Please, fill all fields');
-            }
-        };
-
-        if(req.files.length == 0)
-            return res.send('Please, send at least one image');
-
-            let results = await Product.create(req.body);
-            const productId = results.rows[0].id;
-
-            const filesPromise = req.files.map(file => File.create({
-                ...file,
-                product_id: productId
-            })
-            );
-            await Promise.all(filesPromise);
-
-            return res.redirect(`/products/${productId}/edit`);
-    },
+    
     async edit(req, res){
         let results = await Product.find(req.params.id);
         const product = results.rows[0];
