@@ -5,7 +5,6 @@ const Product = require('../models/Product');
 const File = require('../models/File');
 const LoadProductServices = require('../services/LoadProductService');
 
-const {formatPrice, date} = require('../../lib/utils');
 
 module.exports = {
     async create(req, res){
@@ -18,39 +17,26 @@ module.exports = {
     },
     async post(req, res){
         try {
-
-            const keys = Object.keys(req.body);
-
-            for(key of keys){
-                if(req.body[key] == ""){
-                    return res.send('Please, fill all fields');
-                }
-            };
-
-            if(req.files.length == 0)
-                return res.send('Please, send at least one image');
-
-                let {category_id, name, description, old_price,
+            let {category_id, name, description, old_price,
                 price, quantity, status} = req.body;
-
-                price = price.replace(/\D/g,"");
+            price = price.replace(/\D/g,"");
                 
-                const product_id = await Product.create({
-                    category_id, 
-                    user_id: req.session.userId,
-                    name, 
-                    description, 
-                    old_price: old_price || price,
-                    price, 
-                    quantity, 
-                    status: status || 1
-                });
+            const product_id = await Product.create({
+                category_id, 
+                user_id: req.session.userId,
+                name, 
+                description, 
+                old_price: old_price || price,
+                price, 
+                quantity, 
+                status: status || 1
+            });
 
-                const filesPromise = req.files.map(file => 
-                    File.create({name: file.filename, path: file.path, product_id}));
-                await Promise.all(filesPromise);
+            const filesPromise = req.files.map(file => 
+                File.create({name: file.filename, path: file.path, product_id}));
+            await Promise.all(filesPromise);
 
-                return res.redirect(`/products/${product_id}/edit`);
+            return res.redirect(`/products/${product_id}/edit`);
 
         } catch (err) {
             console.error(err);
@@ -85,14 +71,6 @@ module.exports = {
     },
     async put(req, res){
         try {
-        const keys = Object.keys(req.body);
-
-        for(key of keys){
-            if(req.body[key] == "" && key != "removed_files"){
-                return res.send('Please, fill all fields');
-            };
-        };
-
         if(req.files.length != 0){
             const newFilesPromise = req.files.map(file => 
                 File.create({...file, product_id: req.body.id}));
