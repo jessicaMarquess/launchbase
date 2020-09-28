@@ -10,7 +10,6 @@ const SessionValidator = require('../app/validators/session');
 
 const {isLoggedRedirectToUsers, onlyUsers} = require('../app/middlewares/session');
 
-
 // //login/logout
 routes.get('/login', isLoggedRedirectToUsers, SessionController.loginForm);
 routes.post('/login', SessionValidator.login, SessionController.login);

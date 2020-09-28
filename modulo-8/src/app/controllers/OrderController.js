@@ -38,12 +38,11 @@ module.exports = {
             html: email(seller, product, buyer)
         })
         //notificar o usuário com alguma mensagem de sucesso
-        return res.render('/orders/success');
+        return res.render('orders/success');
         }
         catch(err) {
             console.error(err);
-            return res.render('/orders/error');
+            return res.render('orders/error');
         };
-                
-    }
-}
+    },
+};
