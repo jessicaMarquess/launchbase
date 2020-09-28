@@ -110,6 +110,6 @@ module.exports = {
         const products = await LoadProductService.load('products', {
             where: {user_id: req.session.userId},
         });
-        return res.render('user/ads', products);
+        return res.render('user/ads', {products});
     },
 };
