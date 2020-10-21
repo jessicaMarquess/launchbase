@@ -22,7 +22,7 @@ const Cart = {
             inCart = {
                 product:{
                     ...product,
-                    formattedPrice: formatPrice(product.price);
+                    formattedPrice: formatPrice(product.price)
                 },
                 quantity: 0,
                 price: 0,
@@ -44,6 +44,24 @@ const Cart = {
         return this;
     },
     removeOne(productId){
+        const inCart = this.items.find(item => item.product.id == productId);
+
+        if(!inCart) return this;
+
+        inCart.quantity--;
+        inCart.price = inCart.product.price * inCart.quantity;
+        inCart.formattedPrice = formatPrice(inCart.price);
+
+        this.total.quantity--;
+        this.total.price -= inCart.product.price;
+        this.total.formattedPrice = formatPrice(this.total.price);
+
+        if(inCart.quantity < 1){
+           this.items = this.items.filter(item => 
+                item.product.id != inCart.product.id);
+                
+            return this;
+        }
     },
     delete(productId){
     },
