@@ -87,6 +87,4 @@ const product = {
     quantity: 2,
 };
 
-console.log(Card.init().addOne(product));
-
 module.exports = Cart;
