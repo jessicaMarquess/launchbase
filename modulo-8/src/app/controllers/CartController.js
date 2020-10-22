@@ -4,7 +4,7 @@ const LoadProductsService = require('../services/LoadProductService');
 module.exports = { 
     async index(req, res) {
         try {
-            const product = await LoadProductsService.load('products', {where: {id: 1}}); 
+            const product = await LoadProductsService.load('product', {where: {id: 1}}); 
 
             let { cart } = req.session;
             

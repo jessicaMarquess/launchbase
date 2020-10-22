@@ -12,7 +12,7 @@
             {% for item in cart.items %}
             <div class="item">
                 <a href="/products/{{item.product.id}}">
-                    <img src="{{item.product.img}}" alt="Imagem do Produto {{product.name}}">
+                    <img src="{{item.product.img}}" alt="Imagem do Produto {{item.product.name}}">
                     <span class="title">{{item.product.name}}</span>
                 </a>
                 <span class="price">{{item.formattedPrice}}</span>
@@ -22,10 +22,7 @@
                             <i class="material-icons">remove_circle_outline</i>
                         </button>
                     </form>
-                    
                     <span class="quantity">{{item.quantity}}</span>
-
-
                     <form action="/cart/{{item.product.id}}/add-one" method="POST">
                         <button class="add">
                             <i class="material-icons">add_circle_outline</i>
