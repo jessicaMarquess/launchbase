@@ -44,7 +44,7 @@ const Cart = {
         return this;
     },
     removeOne(productId){
-        const inCart = this.getCardItem(productId);;
+        const inCart = this.getCardItem(productId);
 
         if(!inCart) return this;
 
@@ -62,6 +62,7 @@ const Cart = {
                 
             return this;
         }
+        return this;
     },
     delete(productId){
         const inCart = this.getCardItem(productId);
