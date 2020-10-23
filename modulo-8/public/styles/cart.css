@@ -95,7 +95,6 @@
 .cart .button.order:hover{
     background-color: rgb(15, 179, 15);
 }
-
 /* empty cart */
 .cart-empty{
     text-align: center;

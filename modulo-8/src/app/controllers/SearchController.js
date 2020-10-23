@@ -3,9 +3,7 @@ const LoadProductService = require('../services/LoadProductService');
 
 module.exports = { 
     async index(req, res) {
-
         try {
-
             let { filter, category } = req.query;
             
             if(!filter || filter.toLowerCase() == 'toda a loja') filter = null;
@@ -33,6 +31,7 @@ module.exports = {
 
                 return categoriesFiltered;
             }, []);
+            
             return res.render("search/index", {products, search, categories});
         }
         catch(err) {
