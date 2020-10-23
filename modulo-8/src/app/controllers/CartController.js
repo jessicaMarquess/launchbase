@@ -32,6 +32,7 @@ module.exports = {
         };
     },
     removeOne(req, res){
+        try {
             let { id } = req.params;
 
             let { cart } = req.session;
@@ -42,5 +43,23 @@ module.exports = {
 
             return res.redirect('/cart');
     
-    }
-}
+        } catch (error) {
+            console.error(error);
+        };
+    },
+    delete(req, res){
+        try {
+            let {id} = req.params;
+            let {cart}= req.session;
+
+            if(!cart) return;
+
+            req.session.cart = Cart.init(cart).delete(id);
+
+            return res.redirect('/cart');
+
+        } catch (error) {
+            console.error(error);
+        };
+    },
+};
