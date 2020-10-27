@@ -4,10 +4,7 @@ const LoadProductService = require('../services/LoadProductService');
 
 const Cart = require('../../lib/cart');
 const mailer = require('../../lib/mailer');
-const {formattedPrice, date} = require('../../lib/utils');
-
-
-
+const {formattedPrice, date, formatPrice} = require('../../lib/utils');
 
 const email = (seller, product, buyer) => `
     <h2>Olá, ${seller.name}</h2>
@@ -25,6 +22,7 @@ const email = (seller, product, buyer) => `
     <p><br/><br/></p>
     <p>Atenciosamente, Equipe Launchstore</p>
 `
+
 module.exports = {
     async index(req, res){
         //pegar os pedidos do user
@@ -44,8 +42,8 @@ module.exports = {
                 where:{id:order.seller_id}
             });
             //formatation of price
-            order.formattedPrice = formattedPrice(order.price);
-            order.formattedTotal = formattedPrice(order.total);
+            order.formattedPrice = formatPrice(order.price);
+            order.formattedTotal = formatPrice(order.total);
             //formatation of status
             const statuses = {
                 open: 'Aberto',
