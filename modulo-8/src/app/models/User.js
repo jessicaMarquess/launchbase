@@ -4,5 +4,4 @@ Base.init({table: 'users'});
 
 module.exports = {
     ...Base,
-    
 };
