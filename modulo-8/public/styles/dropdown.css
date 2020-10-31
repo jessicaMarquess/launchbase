@@ -21,6 +21,7 @@ ul.dropdown{
     opacity: 0;
     visibility: hidden;
     transition: all 200ms;
+    z-index: 1;
 }
 ul.dropdown li a,
 ul.dropdown li button{
