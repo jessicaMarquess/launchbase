@@ -3,7 +3,7 @@
        
     --status-sold: rgb(31, 85, 31);
 
-    --sold-canceled:rgb(184, 38, 38);  
+    --status-canceled:rgb(184, 38, 38);  
 }
 
 .order-success,
@@ -86,7 +86,7 @@ background-color: #eee;
     background-color: var(--status-sold);
 }
 .orders .status.canceled{
-    background-color: var(--sold-canceled);
+    background-color: var(--status-canceled);
 }
 .order-detail{
     max-width: 700px;
